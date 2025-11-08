@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import GeneralInfo from './components/GeneralInformation'
+import EducationInfo from './components/EducationInfo';
 
 function App() {
   const [isEditable, setIsEditable] = useState(true);
@@ -11,7 +12,16 @@ function App() {
     adress: ""
   });
 
-  function onChangeValue(e){
+  const [eduactionInf, changeEducationInfo] = useState({
+    schoolName: "",
+    title: "",
+    city: "",
+    country: "",
+    dateS: null,
+    dateE: null
+  });
+
+  function onChangeValueGeneral(e){
       const value = e.target.value;
       const inputName = e.target.name;
       const newGeneralInf = {
@@ -19,6 +29,16 @@ function App() {
         [inputName]: value
       };
       changeGeneralInfo(newGeneralInf);
+  }
+
+  function onChangeValueEducation(e){
+      const value = e.target.value;
+      const inputName = e.target.name;
+      const newEducationInf = {
+        ...eduactionInf,
+        [inputName]: value
+      };
+      changeEducationInfo(newEducationInf);
   }
 
   function handleSubmit(e){
@@ -30,11 +50,12 @@ function App() {
     <>
       <h1>CV Aplication</h1>
       <form onSubmit={handleSubmit} className='main'>
-        <GeneralInfo {...generalInf} onChangeValue={onChangeValue} isEditable={isEditable}/>
+        <GeneralInfo {...generalInf} onChangeValue={onChangeValueGeneral} isEditable={isEditable}/>
+        <EducationInfo {...eduactionInf} onChangeValue={onChangeValueEducation} isEditable={isEditable}/>
         <button type="submit">{isEditable ? "Guardar" : "Editar"}</button>
       </form>
     </>
   )
 }
 
-export default App
+export default App;

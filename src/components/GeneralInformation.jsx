@@ -12,26 +12,29 @@ function GeneralInfo({name, email, phone,adress, onChangeValue, isEditable}){
             <label htmlFor="phoneUsuario">Phone: </label>
             <input type="tel" onChange={onChangeValue} value={phone} id="phoneUsuario" name="phone"/>
 
-            <label htmlFor="adressUsuario">Phone: </label>
+            <label htmlFor="adressUsuario">Adress: </label>
             <input type="text" onChange={onChangeValue} value={adress} id="adressUsuario" name="adress"/>
         </>
     ); 
 
-    const displayInfo = (
+    const displayInfo = ( 
         <>
-        <div className="sub-section">
-            <h2>Nombre: </h2>
-            <p> {name} </p>
-        </div>
-        <div className="sub-section">
-            <h2>Email: </h2>
-            <p> {email} </p>
-        </div>
-        <div className='sub-section'>
-            <h2>Phone: </h2>
-            <p> {phone} </p>
-        </div>
-
+            <div className="sub-section">
+                <h2>Nombre: </h2>
+                <p> {name} </p>
+            </div>
+            <div className="sub-section">
+                <h2>Email: </h2>
+                <p> {email} </p>
+            </div>
+            <div className='sub-section'>
+                <h2>Phone: </h2>
+                <p> {phone} </p>
+            </div>
+            <div className='sub-section'>
+                <h2>Adress: </h2>
+                <p> {adress} </p>
+            </div>
         </>
     );
 
