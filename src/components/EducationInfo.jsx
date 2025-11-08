@@ -1,7 +1,7 @@
 import "../styles/educationInfo.css"
 
 
-function EducationInfo({schoolName, title, city, country, dateOfStart, dateOfEnd, onChangeValue, isEditable}){
+function EducationInfo({schoolName, title, city, country, dateS, dateE, onChangeValue, isEditable}){
     const inputEducationInfo = (
         <>
             <label htmlFor="schoolName">School Name: </label>
@@ -18,10 +18,10 @@ function EducationInfo({schoolName, title, city, country, dateOfStart, dateOfEnd
 
             <div className="education-info-input__dates">
                 <label htmlFor="dateS">Date of Start: </label>
-                <input type="date" value={dateOfStart} name="dateS" id="dateS" onChange={onChangeValue}/>
+                <input type="date" value={dateS} name="dateS" id="dateS" onChange={onChangeValue}/>
 
                 <label htmlFor="dateE">Date of End: </label>
-                <input type="date" value={dateOfEnd} name="dateE" id="dateE" onChange={onChangeValue}/>
+                <input type="date" value={dateE} name="dateE" id="dateE" onChange={onChangeValue}/>
             </div>
         </>
     );
@@ -46,11 +46,11 @@ function EducationInfo({schoolName, title, city, country, dateOfStart, dateOfEnd
             </div>
             <div className='sub-section'>
                 <h4>Date of Start: </h4>
-                <p> {dateOfStart} </p>
+                <p> {dateE} </p>
             </div>
             <div className='sub-section'>
                 <h4>Date of End: </h4>
-                <p> {dateOfEnd} </p>
+                <p> {dateE} </p>
             </div>
         </>
     );
