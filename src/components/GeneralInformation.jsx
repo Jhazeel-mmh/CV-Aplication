@@ -20,26 +20,26 @@ function GeneralInfo({name, email, phone,adress, onChangeValue, isEditable}){
     const displayInfo = ( 
         <>
             <div className="sub-section">
-                <h2>Nombre: </h2>
+                <h4>Nombre: </h4>
                 <p> {name} </p>
             </div>
             <div className="sub-section">
-                <h2>Email: </h2>
+                <h4>Email: </h4>
                 <p> {email} </p>
             </div>
             <div className='sub-section'>
-                <h2>Phone: </h2>
+                <h4>Phone: </h4>
                 <p> {phone} </p>
             </div>
             <div className='sub-section'>
-                <h2>Adress: </h2>
+                <h4>Adress: </h4>
                 <p> {adress} </p>
             </div>
         </>
     );
 
     return (
-        <div className='general-info section'>
+        <div className='general-info-input section'>
             <h2>General Information</h2>
             {isEditable ? inputFields : displayInfo }
         </div>

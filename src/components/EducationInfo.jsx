@@ -29,27 +29,27 @@ function EducationInfo({schoolName, title, city, country, dateOfStart, dateOfEnd
      const displayInfo = ( 
         <>
             <div className="sub-section">
-                <h2>School Name: </h2>
+                <h4>School Name: </h4>
                 <p> {schoolName} </p>
             </div>
             <div className="sub-section">
-                <h2>Title: </h2>
+                <h4>Title: </h4>
                 <p> {title} </p>
             </div>
             <div className='sub-section'>
-                <h2>City: </h2>
+                <h4>City: </h4>
                 <p> {city} </p>
             </div>
             <div className='sub-section'>
-                <h2>Country: </h2>
+                <h4>Country: </h4>
                 <p> {country} </p>
             </div>
             <div className='sub-section'>
-                <h2>Date of Start: </h2>
+                <h4>Date of Start: </h4>
                 <p> {dateOfStart} </p>
             </div>
             <div className='sub-section'>
-                <h2>Date of End: </h2>
+                <h4>Date of End: </h4>
                 <p> {dateOfEnd} </p>
             </div>
         </>
