@@ -1,4 +1,5 @@
 import "../styles/educationInfo.css"
+import "../styles/inputField.css"
 
 
 function EducationInfo({schoolName, title, city, country, dateS, dateE, onChangeValue, isEditable}){
@@ -16,7 +17,7 @@ function EducationInfo({schoolName, title, city, country, dateS, dateE, onChange
             <label htmlFor="country">Country: </label>
             <input type="text" value={country} name="country" id="country" onChange={onChangeValue}/>
 
-            <div className="education-info-input__dates">
+            <div className="education-info-input__dates dates">
                 <label htmlFor="dateS">Start Date: </label>
                 <input type="date" value={dateS} name="dateS" id="dateS" onChange={onChangeValue}/>
 
@@ -45,7 +46,7 @@ function EducationInfo({schoolName, title, city, country, dateS, dateE, onChange
                 <p> {country} </p>
             </div>
 
-            <div className="education-info-input__info">
+            <div className="education-info-input__dates">
                 <div className='sub-section'>
                     <h4>Start Date: </h4>
                     <p> {dateE} </p>

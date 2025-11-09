@@ -1,5 +1,15 @@
-.section {
+.general-info-input {
     display: flex;
     flex-flow: column;
+    gap: 5px;
+}
+
+
+.sub-section {
+    display: flex;
+    flex-direction: row;
     gap: 10px;
+    p {
+     margin: 0;   
+    }
 }

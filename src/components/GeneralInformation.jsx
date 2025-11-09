@@ -1,4 +1,5 @@
 import '../styles/generalInformation.css'
+import "../styles/inputField.css"
 
 function GeneralInfo({name, email, phone,adress, onChangeValue, isEditable}){
     const inputFields = (

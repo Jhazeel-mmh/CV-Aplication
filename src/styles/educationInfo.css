@@ -1,5 +1,10 @@
 .education-info-input {
     display: flex;
     flex-flow: column;
-    gap: 10px;
+    gap: 5px;
+}
+
+.education-info-input__info {
+    display: flex;
+    flex-flow: row;
 }

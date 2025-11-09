@@ -1,4 +1,5 @@
 import "../styles/experienciesInfo.css"
+import "../styles/inputField.css"
 
 function ExperienciesInfo({company, role, responsabilities, dateS, dateE, onChangueValue, isEditable }){
     const inputExperienciesInfo = (
@@ -11,12 +12,12 @@ function ExperienciesInfo({company, role, responsabilities, dateS, dateE, onChan
 
             <label htmlFor="responsabilities">Responsabilities: </label>
             <input type="text" name="responsabilities" id="responsabilities" value={responsabilities} onChange={onChangueValue}/>
-            <div className="experiencies-info-input__dates">
+            <div className="experiencies-info-input__dates dates">
                  <label htmlFor="dateS">Start Date: </label>
-                <input type="date" name="dateS" id="dateS" value={dateS} onChange={onChangueValue}/>
+                <input type="date" name="dateS" id="dateS" value={dateS} onChange={onChangueValue} />
 
                 <label htmlFor="dateE">End Date: </label>
-                <input type="date" name="dateE" id="dateE" value={dateE} onChange={onChangueValue}/>
+                <input type="date" name="dateE" id="dateE" value={dateE} onChange={onChangueValue} />
             </div>
         </>
     );

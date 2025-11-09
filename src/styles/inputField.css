@@ -1,0 +1,28 @@
+input {
+    padding: 8px;
+    background-color: oklch(92.8% 0.006 264.531);
+    color: #333;
+    border-style: none;
+    border: solid #aaa 0.5px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+input[type="date"]{
+    background-color: oklch(62.3% 0.214 259.815);
+    color: #fff;
+    padding: 10px;
+    height: auto;
+}
+
+.dates {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+}
