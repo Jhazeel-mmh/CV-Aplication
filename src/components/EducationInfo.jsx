@@ -17,10 +17,10 @@ function EducationInfo({schoolName, title, city, country, dateS, dateE, onChange
             <input type="text" value={country} name="country" id="country" onChange={onChangeValue}/>
 
             <div className="education-info-input__dates">
-                <label htmlFor="dateS">Date of Start: </label>
+                <label htmlFor="dateS">Start Date: </label>
                 <input type="date" value={dateS} name="dateS" id="dateS" onChange={onChangeValue}/>
 
-                <label htmlFor="dateE">Date of End: </label>
+                <label htmlFor="dateE">End Date: </label>
                 <input type="date" value={dateE} name="dateE" id="dateE" onChange={onChangeValue}/>
             </div>
         </>
@@ -44,14 +44,20 @@ function EducationInfo({schoolName, title, city, country, dateS, dateE, onChange
                 <h4>Country: </h4>
                 <p> {country} </p>
             </div>
-            <div className='sub-section'>
-                <h4>Date of Start: </h4>
-                <p> {dateE} </p>
+
+            <div className="education-info-input__info">
+                <div className='sub-section'>
+                    <h4>Start Date: </h4>
+                    <p> {dateE} </p>
+                </div>
+                <div className='sub-section'>
+                    <h4>End Date: </h4>
+                    <p> {dateE} </p>
+                </div>
             </div>
-            <div className='sub-section'>
-                <h4>Date of End: </h4>
-                <p> {dateE} </p>
-            </div>
+
+
+            
         </>
     );
 
