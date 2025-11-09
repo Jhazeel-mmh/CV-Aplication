@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 80vw;
   height: auto;
   padding: 5%;
+  padding-top: 0;
 }
 .main__preview-sec {
   box-shadow: 10px 10px 25px 3px #aaa;
@@ -61,4 +62,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 60%;
   height: auto;
   text-align: center;
+}
+
+.utilities {
+  display: flex;
+  gap: 25px;
+  margin: 50px;
 }

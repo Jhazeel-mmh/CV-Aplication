@@ -4,6 +4,30 @@ import GeneralInfo from './components/GeneralInformation'
 import EducationInfo from './components/EducationInfo';
 import ExperienciesInfo from './components/ExperienciesInfo';
 import PreviewCv from './components/PreviewCv';
+const exampleGI = {
+    name: "Jhazeel Manuel Mtz Hdz",
+    email: "jhazeelmtz@gmail.com",
+    phone: "+1 XXX 320 XX XX",
+    adress: "Miahuatlan de Porfirio Diaz, Oax"
+};
+
+const exampleEI = {
+    schoolName: "Colegio de Bachilleres del Estado de Oaxaca",
+    title: "ICT Technician",
+    city: "Miahuatlan de Porfirio Diaz",
+    country: "Mexico",
+    dateS: "2023-11-05",
+    dateE: "2026-11-05"
+};
+
+const exampleEX = {
+  company: "ConectaCobao",
+  role: "Front End Dev",
+  responsabilities: "A lot",
+  dateS: "2023-11-05",
+  dateE: "2026-11-05"
+};
+
 
 function App() {
   const [isEditable, setIsEditable] = useState(true);
@@ -66,10 +90,43 @@ function App() {
     setIsEditable(!isEditable);
   }
 
+  function loadTemplate(){
+    changeGeneralInfo(exampleGI);
+    changeEducationInfo(exampleEI);
+    changeExperienciesInf(exampleEX);
+  }
+  function resetInfo(){
+    changeGeneralInfo({
+    name: "",
+    email: "",
+    phone: "",
+    adress: ""
+  });
+    changeEducationInfo({
+    schoolName: "",
+    title: "",
+    city: "",
+    country: "",
+    dateS: null,
+    dateE: null
+  });
+    changeExperienciesInf({
+    company: "",
+    role: "",
+    responsabilities: "",
+    dateS: null,
+    dateE: null
+  });
+  }
+
   return (
     <>
     
       <h1>CV Aplication</h1>
+      <div className="utilities">
+        <button type="button" onClick={loadTemplate}>Load Template</button>
+        <button type="button" onClick={resetInfo}>Reset Info</button>
+      </div>
       <div className='main'>
         <form onSubmit={handleSubmit} className='main__form'>
           <GeneralInfo {...generalInf} onChangeValue={onChangeValueGeneral} isEditable={isEditable}/>
