@@ -69,3 +69,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: 25px;
   margin: 50px;
 }
+
+a {
+  width: 40px;
+  height: 40px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}

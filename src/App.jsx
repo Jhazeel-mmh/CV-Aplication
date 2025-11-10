@@ -4,6 +4,8 @@ import GeneralInfo from './components/GeneralInformation'
 import EducationInfo from './components/EducationInfo';
 import ExperienciesInfo from './components/ExperienciesInfo';
 import PreviewCv from './components/PreviewCv';
+import gitHubImg from './assets/github.png'
+
 const exampleGI = {
     name: "Jhazeel Manuel Mtz Hdz",
     email: "jhazeelmtz@gmail.com",
@@ -23,7 +25,7 @@ const exampleEI = {
 const exampleEX = {
   company: "ConectaCobao",
   role: "Front End Dev",
-  responsabilities: "A lot",
+  responsabilities: "A lot..... Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aut, doloremque cum odio eum amet dignissimos eaque qui consequatur voluptas ab repudiandae magni ullam soluta magnam et quia ut necessitatibus!",
   dateS: "2023-11-05",
   dateE: "2026-11-05"
 };
@@ -107,15 +109,15 @@ function App() {
     title: "",
     city: "",
     country: "",
-    dateS: null,
-    dateE: null
+    dateS: "",
+    dateE: ""
   });
     changeExperienciesInf({
     company: "",
     role: "",
     responsabilities: "",
-    dateS: null,
-    dateE: null
+    dateS: "",
+    dateE: ""
   });
   }
 
@@ -126,6 +128,9 @@ function App() {
       <div className="utilities">
         <button type="button" onClick={loadTemplate}>Load Template</button>
         <button type="button" onClick={resetInfo}>Reset Info</button>
+        <a href="https://github.com/Jhazeel-mmh" target="_blank" rel="noopener noreferrer">
+          <img src={gitHubImg} alt="github"/>
+        </a>
       </div>
       <div className='main'>
         <form onSubmit={handleSubmit} className='main__form'>
@@ -142,20 +147,24 @@ function App() {
             <p className='preview-sec__gi__adress'>{generalInf.adress}</p>
           </div>
           <div className="preview-sec__education-info">
-            <h4>Education Info</h4>
-            <p className='preview-sec__ei__school'>{eduactionInf.schoolName}</p>
-            <p className='preview-sec__ei__title'>{eduactionInf.title}</p>
-            <p className='preview-sec__ei__city'>{eduactionInf.city}</p>
-            <p className='preview-sec__ei__country'>{eduactionInf.country}</p>
+            <h4 className='subtitle'>Education Info</h4>
             <div className="preview-sec__ei__dates">
               <p className='preview-sec__ei__dates-s'>{eduactionInf.dateS}</p>
               <p className='preview-sec__ei__dates-e'>{eduactionInf.dateE}</p>
             </div>
+            <div className="preview-sec__ei__info">
+              <p className='preview-sec__ei__school'><strong>{eduactionInf.schoolName}</strong></p>
+              <p className='preview-sec__ei__title'>{eduactionInf.title}</p>
+              <p className='preview-sec__ei__city'>{eduactionInf.city}</p>
+              <p className='preview-sec__ei__country'>{eduactionInf.country}</p>
+            </div>
           </div>
-          <div className="preview-sec__experiencies-info">
-            <h4 className='preview-sec__exi__company'>{experienciesInf.company}</h4>
-            <h5 className='preview-sec__exi__role'>{experienciesInf.role}</h5>
-            <p className="preview-sec__exi__responsabilities">{experienciesInf.responsabilities}</p>
+          <div className="preview-sec__experiencie-info">
+            <h4 className='preview-sec__exi__company subtitle' ><strong>{experienciesInf.company}</strong></h4>
+            <div className="preview-sec__exi__info">
+              <h5 className='preview-sec__exi__role'>{experienciesInf.role}</h5>
+              <p className="preview-sec__exi__responsabilities">{experienciesInf.responsabilities}</p>
+            </div>
             <div className="preview-sec__exi__dates">
               <p className='preview-sec__exi__dates-s'>{experienciesInf.dateS}</p>
               <p className='preview-sec__exi__dates-e'>{experienciesInf.dateE}</p>

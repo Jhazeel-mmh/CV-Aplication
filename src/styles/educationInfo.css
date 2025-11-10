@@ -7,4 +7,9 @@
 .education-info-input__info {
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
+    width: 100%;
+    h4 {
+        width: 100%;
+    }
 }
