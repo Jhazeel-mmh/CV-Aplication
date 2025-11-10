@@ -45,6 +45,21 @@ p {
     grid-row: 2 / 3;
 }
 
+@media (max-width: 768px){
+    .preview-sec__general-info{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+    }
+
+    .preview-sec__gi__name,
+    .preview-sec__gi__email,
+    .preview-sec__gi__phone, 
+    .preview-sec__gi__adress {
+        grid-column: auto / auto;
+        grid-row: auto / auto;s
+    }
+}
+
 
 .preview-sec__education-info {
     height: 20%;

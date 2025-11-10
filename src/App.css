@@ -27,12 +27,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main {
+  box-sizing: border-box;
   display: flex;
   flex-flow: row;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   padding: 5%;
   padding-top: 0;
+  flex-wrap: wrap;
 }
 .main__preview-sec {
   box-shadow: 10px 10px 25px 3px #aaa;
@@ -50,22 +52,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main__form {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 40%;
+  width: 35%;
   height: auto;
   text-align: center;
 }
 
 .main__preview-sec {
+  box-sizing: border-box;
   width: 60%;
   height: auto;
   text-align: center;
 }
 
+
+
 .utilities {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   margin: 50px;
 }
@@ -78,4 +85,18 @@ a {
 img {
   height: 100%;
   width: 100%;
+}
+
+@media (max-width: 768px){
+  .main__form, .main__preview-sec{
+    width: 100%;
+  }
+
+  .utilities {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 1%;
+  }
 }
